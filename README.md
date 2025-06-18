@@ -1,21 +1,22 @@
 # Project 3: Spots
 
-### Overview  
+This is a project in which we create a social media photo sharing platform. The object of this project is to create a responsive platform so all the elements are displayed correctly on popular screen sizes, specifically desktop and mobile screen sizes.
 
-* Intro  
-* Figma  
-* Images  
-  
-**Intro**
-  
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
-  
-**Figma**  
-  
-* [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
-  
-**Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+The technology I used was a macbook. And in order to achieve the goals of this project, techniques used were using a mix, BEM methodology to create clear css structure, using grid and flexbox to achieve the layouts and responsiveness of the page.
+
+## Project Features
+
+-Responsive Design
+-BEM
+-Flexbox
+-Grid
+
+## Deployed Github Page
+
+## Figma
+
+Here is a <a href="https://www.figma.com/design/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project--Spots?node-id=0-1&p=f&t=tnhdp5lXm5YAxEmr-0"> link to the project design on Figma </a>
+
+And this is how my project looks like in desktop and mobile view.
+![image](./screenshots/Screenshot%202025-06-18%20at%205.23.26 pm.png)
+![image](./screenshots/Screenshot%202025-06-18%20at%205.24.19 pm.png)

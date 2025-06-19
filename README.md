@@ -6,12 +6,16 @@ The technology I used was a macbook. And in order to achieve the goals of this p
 
 ## Project Features
 
+-HTML
+-CSS
 -Responsive Design
 -BEM
 -Flexbox
 -Grid
 
 ## Deployed Github Page
+
+https://kb-0-0.github.io/se_project_spots/
 
 ## Figma
 

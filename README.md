@@ -24,3 +24,7 @@ Here is a <a href="https://www.figma.com/design/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-
 And this is how my project looks like in desktop and mobile view.
 ![image](./screenshots/Screenshot%202025-06-18%20at%205.23.26 pm.png)
 ![image](./screenshots/Screenshot%202025-06-18%20at%205.24.19 pm.png)
+
+## Video Describing Project
+
+https://drive.google.com/file/d/1XZs3htGXk5kxfCZdv6GD7RdmULqv1tOz/view?usp=sharing

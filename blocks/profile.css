@@ -2,7 +2,6 @@
   display: flex;
   font-weight: 500;
   line-height: 1.2;
-  gap: 20px;
   padding: 34px 0 20px;
   border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
 }
@@ -12,6 +11,7 @@
   margin-right: 20px;
   height: 190px;
   width: 190px;
+  object-fit: cover;
 }
 
 .profile__column {
@@ -61,21 +61,29 @@
   margin-top: auto;
   width: 107px;
   font-size: 16px;
+  font-weight: 500;
   opacity: 0.7;
   gap: 8px;
   text-align: right;
   border: none;
+  cursor: pointer;
 }
 
 .profile__add-button {
   background-color: #212121;
   color: #fcf5e5;
   margin-left: auto;
-  max-width: 157px;
+  width: 157px;
   height: 52px;
   border-radius: 8px;
   line-height: 1;
   margin-top: auto;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
 }
 
 .profile__plus-icon {
@@ -129,7 +137,7 @@
   }
 
   .profile__add-button {
-    margin-left: 0;
+    margin: 20px 0 0 0;
     max-width: 288px;
     width: 100%;
   }

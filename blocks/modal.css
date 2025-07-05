@@ -29,12 +29,13 @@
   border-radius: 8px;
   background-color: #fff;
   padding: 32px 50px;
+  box-sizing: border-box;
 }
 
 .modal__close-button {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 32px;
+  right: 50px;
   width: 40px;
   height: 40px;
   display: flex;
@@ -51,18 +52,12 @@
   opacity: 1;
 }
 
-.modal__close-button img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  border: rgba(33, 33, 33, 1);
-  display: block;
-}
-
 .modal__title {
   margin: 0 0 32px;
   font-size: 32px;
+  font-weight: 500;
   line-height: 1;
+  color: rgba(33, 33, 33, 1);
 }
 
 .modal__form {
@@ -117,7 +112,7 @@
 @media screen and (max-width: 627px) {
   .modal__container {
     max-width: 300px;
-    padding: 12px;
+    padding: 22px 12px 12px;
     position: relative;
   }
 
@@ -125,15 +120,7 @@
     max-width: 276px;
   }
 
-  .modal__label {
-    font-size: 16px;
-  }
-
   .modal__input {
-    font-size: 16px;
-  }
-
-  .modal__input::placeholder {
     font-size: 16px;
   }
 

@@ -51,7 +51,7 @@
   opacity: 0.4;
 }
 
-.modal__close_type_preview {
+.modal__close-button_type_preview {
   background-image: url(../images/Property\ 1=Variant3.svg);
   top: 0;
   right: -52.5px;
@@ -65,7 +65,7 @@
   opacity: 1;
 }
 
-.modal__close_type_preview:hover {
+.modal__close-button_type_preview:hover {
   opacity: 0.4;
 }
 

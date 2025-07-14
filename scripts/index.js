@@ -48,7 +48,9 @@ const profileDescriptionElement = document.querySelector(
 );
 
 const previewModal = document.querySelector("#preview-modal");
-const previewModalCloseButton = previewModal.querySelector(".modal__close");
+const previewModalCloseButton = previewModal.querySelector(
+  ".modal__close-button_type_preview"
+);
 const previewImageElement = previewModal.querySelector(".modal__image");
 const previewCaptionElement = previewModal.querySelector(".modal__caption");
 
@@ -69,13 +71,12 @@ function getCardElement(data) {
 
   const cardLikeButtonEl = cardElement.querySelector(".card__like-button");
   cardLikeButtonEl.addEventListener("click", () => {
-    cardLikeButtonEl.classList.toggle(".card__like-button_active");
+    cardLikeButtonEl.classList.toggle("card__like-button_active");
   });
 
   const cardDeleteButtonEl = cardElement.querySelector(".card__delete-button");
   cardDeleteButtonEl.addEventListener("click", () => {
     cardElement.remove();
-    cardElement = null;
   });
 
   cardImageEl.addEventListener("click", () => {
@@ -140,6 +141,9 @@ function handleAddCardSubmit(evt) {
   };
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
+
+  nameInput.value = " ";
+  linkInput.value = " ";
 
   closeModal(newPostModal);
 }

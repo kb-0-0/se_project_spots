@@ -51,6 +51,7 @@ const previewModal = document.querySelector("#preview-modal");
 const previewModalCloseButton = previewModal.querySelector(
   ".modal__close-button_type_preview"
 );
+const allModals = document.querySelectorAll(".modal");
 const previewImageElement = previewModal.querySelector(".modal__image");
 const previewCaptionElement = previewModal.querySelector(".modal__caption");
 
@@ -91,16 +92,30 @@ function getCardElement(data) {
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+
+  document.addEventListener("keydown", handleEscClose);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+
+  document.removeEventListener("keydown", handleEscClose);
+}
+
+function handleEscClose(evt) {
+  if (evt.key === "Escape") {
+    const openModal = document.querySelector(".modal.modal_is-opened");
+    if (openModal) {
+      closeModal(openModal);
+    }
+  }
 }
 
 const newPostButton = document.querySelector(".profile__add-button");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseButton = newPostModal.querySelector(".modal__close-button");
 const newPostForm = newPostModal.querySelector(".modal__form");
+const newPostSubmitButton = newPostModal.querySelector(".modal__submit-button");
 const nameInput = document.querySelector("#card-caption-input");
 const linkInput = document.querySelector("#card-image-input");
 
@@ -142,9 +157,8 @@ function handleAddCardSubmit(evt) {
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
 
-  nameInput.value = " ";
-  linkInput.value = " ";
-
+  evt.target.reset();
+  disableButton(newPostSubmitButton, settings);
   closeModal(newPostModal);
 }
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
@@ -153,4 +167,14 @@ newPostForm.addEventListener("submit", handleAddCardSubmit);
 initialCards.forEach(function (item) {
   const cardElement = getCardElement(item);
   cardsList.append(cardElement);
+});
+
+document.addEventListener("keydown", handleEscClose);
+
+allModals.forEach((modal) => {
+  modal.addEventListener("mousedown", (evt) => {
+    if (evt.target === modal) {
+      closeModal(modal);
+    }
+  });
 });

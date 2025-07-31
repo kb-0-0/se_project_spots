@@ -169,8 +169,6 @@ initialCards.forEach(function (item) {
   cardsList.append(cardElement);
 });
 
-document.addEventListener("keydown", handleEscClose);
-
 allModals.forEach((modal) => {
   modal.addEventListener("mousedown", (evt) => {
     if (evt.target === modal) {

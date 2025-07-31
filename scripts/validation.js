@@ -23,11 +23,16 @@ const hideInputError = (formElement, inputElement, config) => {
   inputElement.classList.remove(config.inputErrorClass);
 };
 
-const checkInputValidity = (formElement, inputElement) => {
+const checkInputValidity = (formElement, inputElement, config) => {
   if (!inputElement.validity.valid) {
-    showInputError(formElement, inputElement, inputElement.validationMessage);
+    showInputError(
+      formElement,
+      inputElement,
+      inputElement.validationMessage,
+      config
+    );
   } else {
-    hideInputError(formElement, inputElement);
+    hideInputError(formElement, inputElement, config);
   }
 };
 
@@ -39,7 +44,7 @@ const hasInvalidInput = (inputList) => {
 
 const toggleButtonState = (inputList, buttonElement, config) => {
   if (hasInvalidInput(inputList)) {
-    disableButton(buttonElement);
+    disableButton(buttonElement, config);
   } else {
     buttonElement.disabled = false;
     buttonElement.classList.remove(config.inactiveButtonClass);

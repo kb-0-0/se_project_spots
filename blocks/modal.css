@@ -141,7 +141,7 @@
   opacity: 0.8;
 }
 
-.modal__submit-button-disabled {
+.modal__submit-button_disabled {
   background-color: rgba(33, 33, 33, 1);
   opacity: 0.5;
 }
@@ -172,7 +172,6 @@
 
 @media screen and (max-width: 627px) {
   .modal__container {
-    max-width: 300px;
     padding: 22px 12px 12px;
     position: relative;
   }
@@ -199,7 +198,7 @@
     right: 5px;
   }
 
-  .modal__close_type_preview {
+  .modal__close-button_type_preview {
     top: -48px;
     right: 0;
   }

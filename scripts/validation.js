@@ -37,7 +37,7 @@ const checkInputValidity = (formElement, inputElement, config) => {
 };
 
 const hasInvalidInput = (inputList) => {
-  inputList.some((input) => {
+  return inputList.some((input) => {
     return !input.validity.valid;
   });
 };
@@ -70,6 +70,19 @@ const setEventListeners = (formElement, config) => {
       toggleButtonState(inputList, buttonElement, config);
     });
   });
+};
+
+const resetValidation = (formElement, config) => {
+  const inputList = Array.from(
+    formElement.querySelectorAll(config.inputSelector)
+  );
+  const buttonElement = formElement.querySelector(config.submitButtonSelector);
+
+  inputList.forEach((inputElement) => {
+    hideInputError(formElement, inputElement, config);
+  });
+
+  toggleButtonState(inputList, buttonElement, config);
 };
 
 const enableValidation = (config) => {

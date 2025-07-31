@@ -122,6 +122,7 @@ const linkInput = document.querySelector("#card-image-input");
 editProfileButton.addEventListener("click", function () {
   editProfileNameInput.value = profileNameElement.textContent;
   editProfileDescriptionInput.value = profileDescriptionElement.textContent;
+  resetValidation(editProfileForm, settings);
   openModal(editProfileModal);
 });
 
